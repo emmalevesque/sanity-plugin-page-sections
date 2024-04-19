@@ -40,5 +40,22 @@ export default defineType({
       title: 'Sections',
       type: 'sections',
     })
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      hasColumns: 'hasColumns',
+      columns: 'columns',
+      sections: 'sections'
+    },
+    prepare({title, hasColumns, columns, sections }) {
+      const subtitle = hasColumns
+        ? `Columns: ${columns}`
+        : 'No columns'
+      return {
+        title,
+        subtitle,
+      }
+    }
+  }
 })

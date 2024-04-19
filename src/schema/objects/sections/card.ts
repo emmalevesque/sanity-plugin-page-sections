@@ -7,6 +7,19 @@ export default defineType({
   title: 'Card',
   type: 'object',
   icon: CubeIcon,
+  preview: {
+    select: {
+      title: 'body.0.children.0.text',
+      media: 'image',
+    },
+    prepare({ title, media }) {
+      return {
+        title: 'Card',
+        subtitle: title,
+        media: media,
+      }
+    }
+  },
   fields: [
     defineField({
       name: 'body',

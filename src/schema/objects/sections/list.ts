@@ -1,6 +1,6 @@
-import { defineType } from 'sanity';
+import {defineType} from 'sanity'
 
-import { EllipsisVerticalIcon } from '@sanity/icons'
+import {EllipsisVerticalIcon} from '@sanity/icons'
 
 // TODO: add custom component that accesses
 // config context
@@ -13,8 +13,19 @@ export default defineType({
     {
       name: 'items',
       title: 'Items',
-      type :'array' ,
-      of: [{type :'string'}]
+      type: 'array',
+      of: [{type: 'string'}],
     },
   ],
+  preview: {
+    select: {
+      items: 'items',
+    },
+    prepare({items}) {
+      return {
+        title: 'List',
+        subtitle: items?.length === 0 ? 'Empty' : items?.length === 1 ? '1 item' : `${items?.length} items`,
+      }
+    },
+  },
 })
