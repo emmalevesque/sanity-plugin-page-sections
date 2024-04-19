@@ -1,18 +1,18 @@
 {
   "name": "sanity-plugin-page-sections",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "keywords": [
     "sanity",
     "sanity-plugin"
   ],
-  "homepage": "https://github.com/emmalevesque/sanity-plugin-emoji-icons#readme",
+  "homepage": "https://github.com/emmalevesque/sanity-plugin-page-sections#readme",
   "bugs": {
-    "url": "https://github.com/emmalevesque/sanity-plugin-emoji-icons/issues"
+    "url": "https://github.com/emmalevesque/sanity-plugin-page-sections/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/emmalevesque/sanity-plugin-emoji-icons.git"
+    "url": "git+ssh://git@github.com/emmalevesque/sanity-plugin-page-sections.git"
   },
   "license": "MIT",
   "author": "Emma Levesque-Schaefer <emma.levesque.schaefer@gmail.com>",
