@@ -2,6 +2,9 @@
   "name": "sanity-plugin-page-sections",
   "version": "0.0.1",
   "description": "",
+  "publishConfig": {
+    "access": "restricted"
+  },
   "keywords": [
     "sanity",
     "sanity-plugin"

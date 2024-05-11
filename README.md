@@ -1,6 +1,6 @@
 # sanity-plugin-page-sections
 
-> This is a **Sanity Studio v3** plugin.
+> This is a **Sanity Studio v3** plugin that you can use to scaffold a page builder with the studio editor.
 
 ## Installation
 
