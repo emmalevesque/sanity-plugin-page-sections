@@ -16,6 +16,7 @@ import layout from './documents/layout'
 import settings from './documents/settings'
 import {PageSectionsConfig} from '../types'
 import { defineListType } from './generators/define-list-type'
+import { dateRange } from './objects/fields/dateRange'
 
 const types = ({config}: {config: void | PageSectionsConfig}) => {
   const {listTypes = [], videoType = 'mux.video'} = config ?? {}
@@ -38,6 +39,7 @@ const types = ({config}: {config: void | PageSectionsConfig}) => {
     link,
     caption,
     sections,
+    dateRange,
   ]
 }
 

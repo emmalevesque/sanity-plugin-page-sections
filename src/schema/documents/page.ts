@@ -32,6 +32,13 @@ export default defineType({
         collapsed: true,
       },
     },
+    {
+      name: 'subtitle',
+      title: 'Subtitle',
+      options: {
+        collapsed: true,
+      },
+    }
   ],
   fields: [
     /***
@@ -102,6 +109,12 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
+      fieldset: 'subtitle',
+    }),
+    defineField({
       name: 'hasSlug',
       title: 'Has Page Route',
       type: 'boolean',
@@ -111,6 +124,7 @@ export default defineType({
       name: 'slug',
       title: 'Page Route',
       type: 'slug',
+      hidden: ({parent}) => !parent?.hasSlug,
       readOnly: ({parent}) => !parent?.hasSlug,
       description: 'A slug is required for the project to show up in the preview',
       options: {
@@ -122,6 +136,13 @@ export default defineType({
         rule.custom((value, context) =>
           !value && (context?.parent as SanityDocument)?.hasSlug ? 'Required' : true,
         ),
+    }),
+    defineField({
+      name: 'externalUrl',
+      title: 'External URL',
+      description: 'If this page is hosted elsewhere, provide the URL here. This will override the page route.',
+      type: 'url',
+      hidden: ({parent}) => parent?.hasSlug,
     }),
     defineField({
       name: 'sections',

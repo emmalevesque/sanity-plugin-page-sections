@@ -5,6 +5,7 @@
     "./package.config.ts"
   ],
   "compilerOptions": {
+    "target": "ESNext",
     "rootDir": ".",
     "jsx": "react-jsx",
     "noEmit": true
