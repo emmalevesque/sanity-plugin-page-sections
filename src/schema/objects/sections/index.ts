@@ -5,8 +5,10 @@ export default defineType({
   title: 'Sections',
   type: 'array',
   of: [
+    {type: 'section.hero'},
     {type: 'section.text'},
     {type: 'section.image'},
+    {type: 'section.carousel'},
     {type: 'section.video'},
     {type: 'section.card'},
     {type: 'section.toc'},

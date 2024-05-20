@@ -4,6 +4,7 @@
 
 ## Installation
 
+
 ```sh
 npm install sanity-plugin-page-sections
 ```
